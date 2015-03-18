@@ -8,18 +8,42 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    let images = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"]
+    
+    
+    @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
+        
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+     
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        return images.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+        
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("Cell", forIndexPath: indexPath) as MyCollectionViewCell
+        
+        // Configure the cell
+        
+        // Image aspect fill & hidden horizontal scroll indicator set in storyboard
 
+        var imageName = images[indexPath.row] as String
+        cell.slideImage.image = UIImage(named: imageName)
+        
+        return cell
+    }
 
 }
 
