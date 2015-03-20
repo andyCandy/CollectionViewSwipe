@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		28D3CC8F1ABC129A00D7F1F6 /* SizeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3CC8E1ABC129A00D7F1F6 /* SizeChartViewController.swift */; };
 		28EE0B2D1AB9A5920016B31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE0B2C1AB9A5920016B31D /* AppDelegate.swift */; };
 		28EE0B2F1AB9A5920016B31D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE0B2E1AB9A5920016B31D /* ViewController.swift */; };
 		28EE0B321AB9A5920016B31D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28EE0B301AB9A5920016B31D /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		28D3CC8E1ABC129A00D7F1F6 /* SizeChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeChartViewController.swift; sourceTree = "<group>"; };
 		28EE0B271AB9A5920016B31D /* CollectionViewSwipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewSwipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EE0B2B1AB9A5920016B31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28EE0B2C1AB9A5920016B31D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -82,8 +84,9 @@
 				28EE0B2C1AB9A5920016B31D /* AppDelegate.swift */,
 				28EE0B2E1AB9A5920016B31D /* ViewController.swift */,
 				28EE0B4C1AB9A7430016B31D /* MyCollectionViewCell.swift */,
-				28EE0B301AB9A5920016B31D /* Main.storyboard */,
+				28D3CC8E1ABC129A00D7F1F6 /* SizeChartViewController.swift */,
 				28EE0B331AB9A5920016B31D /* Images.xcassets */,
+				28EE0B301AB9A5920016B31D /* Main.storyboard */,
 				28EE0B351AB9A5920016B31D /* LaunchScreen.xib */,
 				28EE0B2A1AB9A5920016B31D /* Supporting Files */,
 			);
@@ -215,6 +218,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D3CC8F1ABC129A00D7F1F6 /* SizeChartViewController.swift in Sources */,
 				28EE0B2F1AB9A5920016B31D /* ViewController.swift in Sources */,
 				28EE0B2D1AB9A5920016B31D /* AppDelegate.swift in Sources */,
 				28EE0B4D1AB9A7430016B31D /* MyCollectionViewCell.swift in Sources */,
@@ -409,6 +413,7 @@
 				28EE0B481AB9A5920016B31D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		28EE0B491AB9A5920016B31D /* Build configuration list for PBXNativeTarget "CollectionViewSwipeTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +422,7 @@
 				28EE0B4B1AB9A5920016B31D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

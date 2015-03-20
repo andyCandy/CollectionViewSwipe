@@ -10,9 +10,12 @@ import UIKit
 
 class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate {
     
+    // MARK: Data
     
     let images = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"]
     
+    
+    // MARK: Outlets & Actions
     
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -48,6 +51,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var pageControl: UIPageControl!
     
+    @IBOutlet weak var pageScoll: UIScrollView!
+    
+    @IBOutlet weak var sizesSegmentedControl: UISegmentedControl!
+    
+    
+    
+    // MARK: UICollectionViewDataSource & UICollectionViewDelegate
     
     func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
      
@@ -71,18 +81,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         cell.slideImage.image = UIImage(named: imageName)
         
         
-        return cell
-    }
-    
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
-    
-    override func viewWillAppear(animated: Bool) {
+    return cell
         
-        pageControl.numberOfPages = images.count
-        pageControl.currentPage = 0
     }
     
     
@@ -96,6 +96,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         var currentIndexPath = indexPathArray.first as NSIndexPath
         
         pageControl.currentPage = currentIndexPath.item
+    }
+    
+    // MARK: -
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        pageScoll.delegate = self
+        
+        pageScoll.contentSize.width = UIScreen.mainScreen().bounds.width
+        pageScoll.contentSize.height = 936
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        
+        pageControl.numberOfPages = images.count
+        pageControl.currentPage = 0
+        
+//        sizesSegmentedControl.setTitleTextAttributes([NSForegroundColorAttributeName : UIColor.redColor()], forState: UIControlState.Normal)
     }
     
 
