@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		287A73BE1AC0120A005F800E /* SMSegment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A73BC1AC0120A005F800E /* SMSegment.swift */; };
+		287A73BF1AC0120A005F800E /* SMSegmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A73BD1AC0120A005F800E /* SMSegmentView.swift */; };
+		287A73C81AC0279E005F800E /* black.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 287A73C11AC0279E005F800E /* black.jpeg */; };
+		287A73C91AC0279E005F800E /* coconut.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 287A73C21AC0279E005F800E /* coconut.jpeg */; };
+		287A73CA1AC0279E005F800E /* flamingo pink.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 287A73C31AC0279E005F800E /* flamingo pink.jpeg */; };
+		287A73CB1AC0279E005F800E /* tropical orange.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 287A73C41AC0279E005F800E /* tropical orange.jpeg */; };
+		287A73CC1AC0279E005F800E /* kalua nude.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 287A73C51AC0279E005F800E /* kalua nude.jpeg */; };
+		287A73CD1AC0279E005F800E /* pacific blue.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 287A73C61AC0279E005F800E /* pacific blue.jpeg */; };
+		287A73CE1AC0279E005F800E /* colibri green.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 287A73C71AC0279E005F800E /* colibri green.jpeg */; };
+		287A73D11AC03B4D005F800E /* ColorSelectionCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 287A73D01AC03B4D005F800E /* ColorSelectionCollectionViewCell.swift */; };
 		28D3CC8F1ABC129A00D7F1F6 /* SizeChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D3CC8E1ABC129A00D7F1F6 /* SizeChartViewController.swift */; };
 		28EE0B2D1AB9A5920016B31D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE0B2C1AB9A5920016B31D /* AppDelegate.swift */; };
 		28EE0B2F1AB9A5920016B31D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28EE0B2E1AB9A5920016B31D /* ViewController.swift */; };
@@ -28,6 +38,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		287A73BC1AC0120A005F800E /* SMSegment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSegment.swift; sourceTree = "<group>"; };
+		287A73BD1AC0120A005F800E /* SMSegmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SMSegmentView.swift; sourceTree = "<group>"; };
+		287A73C11AC0279E005F800E /* black.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = black.jpeg; sourceTree = "<group>"; };
+		287A73C21AC0279E005F800E /* coconut.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = coconut.jpeg; sourceTree = "<group>"; };
+		287A73C31AC0279E005F800E /* flamingo pink.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "flamingo pink.jpeg"; sourceTree = "<group>"; };
+		287A73C41AC0279E005F800E /* tropical orange.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "tropical orange.jpeg"; sourceTree = "<group>"; };
+		287A73C51AC0279E005F800E /* kalua nude.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "kalua nude.jpeg"; sourceTree = "<group>"; };
+		287A73C61AC0279E005F800E /* pacific blue.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "pacific blue.jpeg"; sourceTree = "<group>"; };
+		287A73C71AC0279E005F800E /* colibri green.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "colibri green.jpeg"; sourceTree = "<group>"; };
+		287A73D01AC03B4D005F800E /* ColorSelectionCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorSelectionCollectionViewCell.swift; sourceTree = "<group>"; };
 		28D3CC8E1ABC129A00D7F1F6 /* SizeChartViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizeChartViewController.swift; sourceTree = "<group>"; };
 		28EE0B271AB9A5920016B31D /* CollectionViewSwipe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CollectionViewSwipe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28EE0B2B1AB9A5920016B31D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,6 +80,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		287A73C01AC01218005F800E /* SMSegmentLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				287A73BC1AC0120A005F800E /* SMSegment.swift */,
+				287A73BD1AC0120A005F800E /* SMSegmentView.swift */,
+			);
+			name = SMSegmentLibrary;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		287A73CF1AC027BA005F800E /* product colors */ = {
+			isa = PBXGroup;
+			children = (
+				287A73C11AC0279E005F800E /* black.jpeg */,
+				287A73C21AC0279E005F800E /* coconut.jpeg */,
+				287A73C31AC0279E005F800E /* flamingo pink.jpeg */,
+				287A73C41AC0279E005F800E /* tropical orange.jpeg */,
+				287A73C51AC0279E005F800E /* kalua nude.jpeg */,
+				287A73C61AC0279E005F800E /* pacific blue.jpeg */,
+				287A73C71AC0279E005F800E /* colibri green.jpeg */,
+			);
+			name = "product colors";
+			sourceTree = "<group>";
+		};
 		28EE0B1E1AB9A5920016B31D = {
 			isa = PBXGroup;
 			children = (
@@ -82,12 +126,15 @@
 			isa = PBXGroup;
 			children = (
 				28EE0B2C1AB9A5920016B31D /* AppDelegate.swift */,
-				28EE0B2E1AB9A5920016B31D /* ViewController.swift */,
+				287A73D01AC03B4D005F800E /* ColorSelectionCollectionViewCell.swift */,
 				28EE0B4C1AB9A7430016B31D /* MyCollectionViewCell.swift */,
+				28EE0B2E1AB9A5920016B31D /* ViewController.swift */,
 				28D3CC8E1ABC129A00D7F1F6 /* SizeChartViewController.swift */,
-				28EE0B331AB9A5920016B31D /* Images.xcassets */,
-				28EE0B301AB9A5920016B31D /* Main.storyboard */,
 				28EE0B351AB9A5920016B31D /* LaunchScreen.xib */,
+				28EE0B301AB9A5920016B31D /* Main.storyboard */,
+				28EE0B331AB9A5920016B31D /* Images.xcassets */,
+				287A73CF1AC027BA005F800E /* product colors */,
+				287A73C01AC01218005F800E /* SMSegmentLibrary */,
 				28EE0B2A1AB9A5920016B31D /* Supporting Files */,
 			);
 			path = CollectionViewSwipe;
@@ -198,9 +245,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287A73C91AC0279E005F800E /* coconut.jpeg in Resources */,
 				28EE0B321AB9A5920016B31D /* Main.storyboard in Resources */,
 				28EE0B371AB9A5920016B31D /* LaunchScreen.xib in Resources */,
+				287A73CE1AC0279E005F800E /* colibri green.jpeg in Resources */,
 				28EE0B341AB9A5920016B31D /* Images.xcassets in Resources */,
+				287A73C81AC0279E005F800E /* black.jpeg in Resources */,
+				287A73CC1AC0279E005F800E /* kalua nude.jpeg in Resources */,
+				287A73CB1AC0279E005F800E /* tropical orange.jpeg in Resources */,
+				287A73CD1AC0279E005F800E /* pacific blue.jpeg in Resources */,
+				287A73CA1AC0279E005F800E /* flamingo pink.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,9 +272,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287A73D11AC03B4D005F800E /* ColorSelectionCollectionViewCell.swift in Sources */,
 				28D3CC8F1ABC129A00D7F1F6 /* SizeChartViewController.swift in Sources */,
 				28EE0B2F1AB9A5920016B31D /* ViewController.swift in Sources */,
+				287A73BF1AC0120A005F800E /* SMSegmentView.swift in Sources */,
 				28EE0B2D1AB9A5920016B31D /* AppDelegate.swift in Sources */,
+				287A73BE1AC0120A005F800E /* SMSegment.swift in Sources */,
 				28EE0B4D1AB9A7430016B31D /* MyCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
