@@ -65,6 +65,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var psvLabel: UILabel!
     
+
+    
     
     
     
@@ -183,9 +185,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         pageControl.currentPage = 0
         
         psvLabel.hidden = true
-        
-//        colorSelectionCV.scrollRectToVisible(rect: CGRect(origin: 0, 0, size: CGSize(UIScreen().bounds.width, 30)), animated: false)
-        
         
 
         
