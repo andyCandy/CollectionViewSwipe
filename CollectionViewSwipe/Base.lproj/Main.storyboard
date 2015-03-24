@@ -141,8 +141,8 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected color: red" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrM-EJ-eZg">
-                                        <rect key="frame" x="38" y="684" width="242" height="17"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected color: none" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrM-EJ-eZg">
+                                        <rect key="frame" x="38" y="694" width="242" height="17"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -183,13 +183,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="isO-eD-Q0u" userLabel="colorSelectionCV">
-                                        <rect key="frame" x="38" y="640" width="243" height="30"/>
+                                        <rect key="frame" x="38" y="640" width="243" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cBZ-Wj-Iya">
                                             <size key="itemSize" width="30" height="30"/>
                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                            <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                         </collectionViewFlowLayout>
                                         <cells>
                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Cell" id="Jci-3c-TS2" customClass="ColorSelectionCollectionViewCell" customModule="CollectionViewSwipe" customModuleProvider="target">
@@ -238,10 +238,12 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1000"/>
                     <connections>
+                        <outlet property="colorLabel" destination="GrM-EJ-eZg" id="IHZ-Xe-A7A"/>
                         <outlet property="colorSelectionCV" destination="isO-eD-Q0u" id="GHR-nY-91a"/>
                         <outlet property="pageControl" destination="k3h-vw-hkN" id="rFR-sI-nM9"/>
                         <outlet property="pageScoll" destination="CzD-rJ-sex" id="xCK-Kd-cz9"/>
                         <outlet property="psvLabel" destination="ebJ-dh-3rW" id="nLq-lt-pnz"/>
+                        <outlet property="sizeLabel" destination="bRk-Er-h3f" id="qxR-j1-oNq"/>
                         <outlet property="swipeCV" destination="IPk-2p-q69" id="bCo-qq-RnD"/>
                     </connections>
                 </viewController>
@@ -264,7 +266,7 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHo-1Z-cTP">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <imageView contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="tabel-marimi2-eb09f6-fcf574" translatesAutoresizingMaskIntoConstraints="NO" id="0vk-rV-2fu">
+                                    <imageView contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vk-rV-2fu">
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     </imageView>
                                 </subviews>
@@ -312,6 +314,5 @@
     <resources>
         <image name="back" width="22" height="22"/>
         <image name="next" width="22" height="22"/>
-        <image name="tabel-marimi2-eb09f6-fcf574" width="758" height="1474"/>
     </resources>
 </document>

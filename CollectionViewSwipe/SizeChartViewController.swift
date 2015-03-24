@@ -19,6 +19,7 @@ class SizeChartViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        chart.image = UIImage(named: "sizeChart")
         scrollView.contentSize = chart.image!.size
         
         
