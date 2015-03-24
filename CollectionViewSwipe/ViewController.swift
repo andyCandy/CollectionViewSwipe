@@ -137,8 +137,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         colorLabel.text = "Selected color: \(colors[indexPath.item])"
         
-        // Draw circle around selected cell item
+        // Draw custom circle around selected cell item
         
+        colorSelectionImageView.image = nil
         colorSelectionImageView.removeFromSuperview()
         
         let rectX: CGFloat = self.colorSelectionCV.cellForItemAtIndexPath(indexPath)!.frame.origin.x
@@ -208,7 +209,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         pageScoll.delegate = self
         
         pageScoll.contentSize.width = UIScreen.mainScreen().bounds.width
-        pageScoll.contentSize.height = 936
+        pageScoll.contentSize.height = 1036
         
         
         // Create a custom SM segmented view
