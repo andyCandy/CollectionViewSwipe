@@ -12,9 +12,22 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     // MARK: - Local data
     
-    let images = ["img1", "img2", "img3", "img4", "img5", "img6", "img7"]
+    let images = ["img1", "img2", "img3", "img4"]
     var colors = ["black", "coconut", "flamingo pink", "tropical orange", "kalua nude", "pacific blue", "colibri green"]
     
+    //
+    
+    let detailsText = "- Tulle: 100% silk\n- Corset structured bodice\n- Skin-tone tulle inserts on the sides of the bodice\n- Covered back\n- Crossed strips of silk tulle cover the bust, creating delicate cutouts\n- Well positioned layers of silk tulle on the hips help flatter the silhouette\n- Hook & Eye closure in the back"
+    
+    let notesText = "Ailani is a beautiful gown with the most flattering bodice. The carefully crafted bust doesn’t show too much, just enough to intrigue."
+    
+    let sizeAndFitText = "- Fitted bust and waist, loose at the hips\n- French sizing\n- The model is 178 cm tall and is wearing a size FR 36"
+    
+    
+   
+    
+    
+    // MARK: - Vars
     var segmentView: SMSegmentView!
     var margin: CGFloat = 30.0
     
@@ -22,8 +35,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     var colorSelectionImageView = UIImageView()
     
-
-
     
     
     // MARK: - Outlets & Actions
@@ -67,11 +78,26 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var pageScoll: UIScrollView!
     
-    @IBOutlet weak var psvLabel: UILabel!
+    @IBOutlet weak var psvLabel: UILabel! // programmatic SV; disable in viewWillAppear
     
+    // size & color labels
     @IBOutlet weak var sizeLabel: UILabel!
-    
     @IBOutlet weak var colorLabel: UILabel!
+    
+    
+    @IBOutlet weak var productDetailsSV: UISegmentedControl!
+    
+    // Segmented view text label
+    
+    @IBOutlet weak var svTextLabel: UILabel!
+    
+    
+    @IBOutlet weak var addToShoppingBagButton: UIButton!
+    @IBOutlet weak var addToWishListButton: UIButton!
+    
+    
+    @IBOutlet weak var sizeChartButton: UIButton!
+    
     
 
     
@@ -139,9 +165,11 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         // Draw custom circle around selected cell item
         
+        // delete previous selection
         colorSelectionImageView.image = nil
-        colorSelectionImageView.removeFromSuperview()
+        colorSelectionImageView.removeFromSuperview() // possible memory management problem until 'viewWillDisappear'!
         
+        // make new selection
         let rectX: CGFloat = self.colorSelectionCV.cellForItemAtIndexPath(indexPath)!.frame.origin.x
         let rectY: CGFloat = self.colorSelectionCV.cellForItemAtIndexPath(indexPath)!.frame.origin.y
         
@@ -155,8 +183,6 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         self.colorSelectionCV.addSubview(colorSelectionImageView)
         colorSelectionImageView.image = image
-        
-        
     }
     
     func drawCustomCircle(size: CGSize) -> UIImage {
@@ -196,10 +222,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         var currentIndexPath = indexPathArray.first as NSIndexPath
         
         pageControl.currentPage = currentIndexPath.item
+        
     }
     
     
+    
+    
     // MARK: -
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -210,6 +240,8 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         pageScoll.contentSize.width = UIScreen.mainScreen().bounds.width
         pageScoll.contentSize.height = 1036
+        
+
         
         
         // Create a custom SM segmented view
@@ -233,9 +265,13 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             segmentView.addSegmentWithTitle("LSM", onSelectionImage: nil, offSelectionImage: nil)
             
             // You can programmatically select/deselect a segment by calling selectSegmentAtIndex(index: Int)
-            segmentView.selectSegmentAtIndex(0)
-            
+//            segmentView.selectSegmentAtIndex(0)
+        
             self.pageScoll.addSubview(self.segmentView)
+        
+        // register target-action method
+        productDetailsSV.addTarget(self, action: "segmentChanged", forControlEvents: .ValueChanged)
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -243,9 +279,39 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         pageControl.numberOfPages = images.count
         pageControl.currentPage = 0
         
+        // hide storyboard label
         psvLabel.hidden = true
         
+        sizeLabel.text = "Selected size: none"
+        
+        // cusomize size chart button
+        sizeChartButton.layer.borderWidth = 1.0
+        sizeChartButton.layer.borderColor = mediumGray.CGColor
+        sizeChartButton.layer.cornerRadius = 5.0
+        
+        svTextLabel.text = notesText
+        
+    }
+    
+    func segmentChanged() {
+        
+        switch productDetailsSV.selectedSegmentIndex {
+            
+        case 0: svTextLabel.text = notesText
+        case 1: svTextLabel.text = sizeAndFitText
+        case 2: svTextLabel.text = detailsText
 
+        default: svTextLabel.text = notesText
+
+        }
+        
+        var newHeight : CGFloat = svTextLabel.frame.height
+        
+        svTextLabel.numberOfLines = 0
+        svTextLabel.sizeToFit()
+        
+        
+        println(svTextLabel.frame.height)
         
     }
     
@@ -267,7 +333,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         case 5: sizeLabel.text = "Selected size: 44"
         case 6: sizeLabel.text = "Selected size: luxury-sur-mesure"
             
-        default: sizeLabel.text = "Selected size: 34"
+        default: sizeLabel.text = "Selected size: none"
         
         }
         

@@ -112,14 +112,14 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose size:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eDq-Yj-YHR">
-                                        <rect key="frame" x="50" y="505" width="220" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <rect key="frame" x="50" y="504" width="220" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected size: 36" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRk-Er-h3f">
-                                        <rect key="frame" x="39" y="572" width="242" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <rect key="frame" x="39" y="576" width="242" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -142,25 +142,25 @@
                                         </state>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected color: none" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GrM-EJ-eZg">
-                                        <rect key="frame" x="38" y="744" width="242" height="17"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                        <rect key="frame" x="39" y="752" width="242" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="AVC-QA-goe">
-                                        <rect key="frame" x="39" y="794" width="242" height="29"/>
+                                        <rect key="frame" x="39" y="781" width="242" height="29"/>
                                         <segments>
-                                            <segment title="MLH NOTES"/>
-                                            <segment title="SIZE &amp; FIT"/>
-                                            <segment title="DETAILS"/>
+                                            <segment title="MLH Notes"/>
+                                            <segment title="Size &amp; Fit"/>
+                                            <segment title="Details"/>
                                         </segments>
                                         <color key="tintColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LZe-li-BiN">
-                                        <rect key="frame" x="126" y="594" width="69" height="30"/>
+                                        <rect key="frame" x="117" y="615" width="86" height="30"/>
                                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <state key="normal" title="Size chart">
-                                            <color key="titleColor" red="0.62745098040000002" green="0.54901960780000003" blue="0.3411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="  Size chart  ">
+                                            <color key="titleColor" red="0.59999999999999998" green="0.59999999999999998" blue="0.59999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
@@ -168,14 +168,14 @@
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Programmatic segemented view" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebJ-dh-3rW">
-                                        <rect key="frame" x="38" y="532" width="242" height="29"/>
+                                        <rect key="frame" x="39" y="532" width="242" height="29"/>
                                         <color key="backgroundColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="isO-eD-Q0u" userLabel="colorSelectionCV">
-                                        <rect key="frame" x="38" y="679" width="243" height="50"/>
+                                        <rect key="frame" x="38" y="694" width="243" height="50"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cBZ-Wj-Iya">
                                             <size key="itemSize" width="30" height="30"/>
@@ -209,28 +209,27 @@
                                         </connections>
                                     </collectionView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose color:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yHB-Ob-fM0">
-                                        <rect key="frame" x="106" y="652" width="108" height="17"/>
+                                        <rect key="frame" x="106" y="669" width="108" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oo1-ue-TRU">
+                                        <rect key="frame" x="39" y="820" width="242" height="19"/>
+                                        <string key="text">Ailani is a beautiful gown with the most flattering bodice. The carefully crafted bust doesn’t show too much, just enough to intrigue.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="SSE-WZ-Ov1">
-                                        <rect key="frame" x="39" y="824" width="240" height="82"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        <string key="text">Ailani is a beautiful gown with the most flattering bodice. The carefully crafted bust doesn’t show too much, just enough to intrigue.</string>
-                                        <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                    </textView>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="CzD-rJ-sex" secondAttribute="bottom" id="2S9-h2-Tql"/>
-                            <constraint firstItem="CzD-rJ-sex" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="3mY-1M-4Oy"/>
-                            <constraint firstItem="CzD-rJ-sex" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4g6-Lb-Z3t"/>
-                            <constraint firstAttribute="trailing" secondItem="CzD-rJ-sex" secondAttribute="trailing" id="iTR-2c-b4l"/>
+                            <constraint firstAttribute="trailing" secondItem="CzD-rJ-sex" secondAttribute="trailing" id="82t-HZ-yHp"/>
+                            <constraint firstItem="CzD-rJ-sex" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" id="dou-Ny-PpQ"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="CzD-rJ-sex" secondAttribute="bottom" id="eNj-tG-HMK"/>
+                            <constraint firstItem="CzD-rJ-sex" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="q8c-0Y-mLr"/>
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
@@ -238,12 +237,17 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="1100"/>
                     <connections>
+                        <outlet property="addToShoppingBagButton" destination="cxu-3U-m5x" id="Y28-Zn-uni"/>
+                        <outlet property="addToWishListButton" destination="iS7-Kj-UyY" id="Rvo-y9-Fmt"/>
                         <outlet property="colorLabel" destination="GrM-EJ-eZg" id="IHZ-Xe-A7A"/>
                         <outlet property="colorSelectionCV" destination="isO-eD-Q0u" id="GHR-nY-91a"/>
                         <outlet property="pageControl" destination="k3h-vw-hkN" id="rFR-sI-nM9"/>
                         <outlet property="pageScoll" destination="CzD-rJ-sex" id="xCK-Kd-cz9"/>
+                        <outlet property="productDetailsSV" destination="AVC-QA-goe" id="ftI-lL-Zg4"/>
                         <outlet property="psvLabel" destination="ebJ-dh-3rW" id="nLq-lt-pnz"/>
+                        <outlet property="sizeChartButton" destination="LZe-li-BiN" id="s6q-sQ-uZK"/>
                         <outlet property="sizeLabel" destination="bRk-Er-h3f" id="qxR-j1-oNq"/>
+                        <outlet property="svTextLabel" destination="oo1-ue-TRU" id="kQl-fe-h8h"/>
                         <outlet property="swipeCV" destination="IPk-2p-q69" id="bCo-qq-RnD"/>
                     </connections>
                 </viewController>
@@ -260,36 +264,74 @@
                         <viewControllerLayoutGuide type="bottom" id="NmC-VI-3ZM"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="x0n-Ld-hZk">
-                        <rect key="frame" x="0.0" y="64" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="1040"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHo-1Z-cTP">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vHo-1Z-cTP" userLabel="mainScroll">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="1040"/>
                                 <subviews>
-                                    <imageView contentMode="TopLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0vk-rV-2fu">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                    </imageView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K84-Ue-nH8" userLabel="scroll1">
+                                        <rect key="frame" x="20" y="20" width="280" height="242"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XMe-XO-jof">
+                                                <rect key="frame" x="0.0" y="0.0" width="490" height="242"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZSi-v6-fGz" userLabel="scroll2">
+                                        <rect key="frame" x="20" y="281" width="280" height="256"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4c1-fY-zuu">
+                                                <rect key="frame" x="0.0" y="0.0" width="490" height="256"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aYQ-EB-XKb" userLabel="scroll4">
+                                        <rect key="frame" x="20" y="827" width="280" height="192"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cDo-E7-SKb">
+                                                <rect key="frame" x="0.0" y="0.0" width="490" height="192"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fix-Ih-ugf" userLabel="scroll3">
+                                        <rect key="frame" x="20" y="556" width="280" height="253"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SWs-lX-o3G">
+                                                <rect key="frame" x="0.0" y="0.0" width="490" height="253"/>
+                                            </imageView>
+                                        </subviews>
+                                    </scrollView>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="vHo-1Z-cTP" firstAttribute="leading" secondItem="x0n-Ld-hZk" secondAttribute="leading" id="9ip-SX-oZy"/>
-                            <constraint firstItem="NmC-VI-3ZM" firstAttribute="top" secondItem="vHo-1Z-cTP" secondAttribute="bottom" id="QXA-AZ-tiS"/>
-                            <constraint firstItem="vHo-1Z-cTP" firstAttribute="top" secondItem="x0n-Ld-hZk" secondAttribute="top" id="fcE-EU-sjK"/>
-                            <constraint firstAttribute="trailing" secondItem="vHo-1Z-cTP" secondAttribute="trailing" id="sDT-DO-rhD"/>
+                            <constraint firstItem="vHo-1Z-cTP" firstAttribute="top" secondItem="w4U-mX-9LY" secondAttribute="bottom" id="Ayl-zP-e7l"/>
+                            <constraint firstItem="vHo-1Z-cTP" firstAttribute="leading" secondItem="x0n-Ld-hZk" secondAttribute="leading" id="CZt-Rn-fWz"/>
+                            <constraint firstItem="NmC-VI-3ZM" firstAttribute="top" secondItem="vHo-1Z-cTP" secondAttribute="bottom" id="Yz2-HA-AW0"/>
+                            <constraint firstAttribute="trailing" secondItem="vHo-1Z-cTP" secondAttribute="trailing" id="yoY-Rb-WB7"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="Size chart" id="HIT-kd-A7o"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="1104"/>
                     <connections>
-                        <outlet property="chart" destination="0vk-rV-2fu" id="GDZ-gF-9hZ"/>
-                        <outlet property="scrollView" destination="vHo-1Z-cTP" id="mIP-50-08d"/>
+                        <outlet property="image1" destination="XMe-XO-jof" id="AFT-Vu-lOG"/>
+                        <outlet property="image2" destination="4c1-fY-zuu" id="oNY-8J-11G"/>
+                        <outlet property="image3" destination="SWs-lX-o3G" id="lU7-Pe-zQP"/>
+                        <outlet property="image4" destination="cDo-E7-SKb" id="X7q-Fu-cMW"/>
+                        <outlet property="mainScroll" destination="vHo-1Z-cTP" id="YOx-Rf-Drt"/>
+                        <outlet property="scroll1" destination="K84-Ue-nH8" id="qrN-6l-K9h"/>
+                        <outlet property="scroll2" destination="ZSi-v6-fGz" id="R4F-CG-vm8"/>
+                        <outlet property="scroll3" destination="Fix-Ih-ugf" id="mjv-Ox-icK"/>
+                        <outlet property="scroll4" destination="aYQ-EB-XKb" id="BdA-ou-9T2"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wIx-ma-uAU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1957" y="381"/>
+            <point key="canvasLocation" x="1957" y="380.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="icN-Gg-OkC">
