@@ -8,12 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UIScrollViewDelegate, SMSegmentViewDelegate {
+class ViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, SMSegmentViewDelegate {
     
     // MARK: - Local data
     
     let images = ["img1", "img2", "img3", "img4"]
     var colors = ["black", "coconut", "flamingo pink", "tropical orange", "kalua nude", "pacific blue", "colibri green"]
+
     
     //
     
@@ -185,6 +186,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         colorSelectionImageView.image = image
     }
     
+
+    
+    
     func drawCustomCircle(size: CGSize) -> UIImage {
         
         let lineWidth: CGFloat = 2.0
@@ -209,6 +213,35 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return image
     }
     
+    
+    // MARK: - UICollectionViewDelegateFlowLayout
+    
+    // center collection view content
+    
+    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+
+        // working on colorSelectionCV
+        if collectionView.tag == 2 {
+            
+            var itemsCount : NSInteger = collectionView.numberOfItemsInSection(0)
+            
+            if itemsCount > 0 {
+                
+                let itemWidth : CGFloat = 30 + 5
+                var totalCellWidth = itemWidth * CGFloat(itemsCount)
+                var contentWidth : CGFloat = collectionView.frame.size.width - collectionView.contentInset.left - collectionView.contentInset.right
+                
+                if totalCellWidth < contentWidth {
+                    
+                    var padding : CGFloat = (contentWidth - totalCellWidth) / 2.0
+                    return UIEdgeInsetsMake(0, padding, 0, padding)
+                }
+            }
+        }
+    
+        return UIEdgeInsetsZero
+    }
+
 
     
     
@@ -227,9 +260,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     
-    
     // MARK: -
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -299,6 +330,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         svTextLabel.numberOfLines = 0
         svTextLabel.text = notesText
         svTextLabel.sizeToFit()
+        
     }
     
 
