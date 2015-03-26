@@ -78,7 +78,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     @IBOutlet weak var pageScoll: UIScrollView!
     
-    @IBOutlet weak var psvLabel: UILabel! // programmatic SV; disable in viewWillAppear
+    @IBOutlet weak var psvLabel: UILabel! // programmatic SV; disable in viewWillAppear (using to position custom segmented view)
     
     // size & color labels
     @IBOutlet weak var sizeLabel: UILabel!
@@ -238,24 +238,25 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         pageScoll.delegate = self
         
-        pageScoll.contentSize.width = UIScreen.mainScreen().bounds.width
-        pageScoll.contentSize.height = 1036
+//        pageScoll.contentSize.width = UIScreen.mainScreen().bounds.width
+//        pageScoll.contentSize.height = 1036
         
 
         
         
-        // Create a custom SM segmented view
+        // Create a custom SM segmented view (NO AUTOLAYOUT!)
         
             let segmentViewProperties : Dictionary<String, AnyObject> = [   keySegmentTitleFont: UIFont.systemFontOfSize(14),
                                                                             keySegmentOnSelectionColour: mediumGray,
                                                                             keySegmentOffSelectionColour: UIColor.whiteColor(),
                                                                             keyContentVerticalMargin: 10.0]
+            var psvLabelY = psvLabel.frame.origin.y
+            let svFrame = CGRect(x: margin, y: psvLabelY, width: self.view.frame.size.width - margin*2, height: 30)
             
-            segmentView = SMSegmentView(frame: CGRect(x: margin, y: 532, width: self.view.frame.size.width - margin*2, height: 30),
-                separatorColour: mediumGray, separatorWidth: 0.5, segmentProperties: segmentViewProperties)
-            
+            segmentView = SMSegmentView(frame: svFrame, separatorColour: UIColor.clearColor(), separatorWidth: 0.5, segmentProperties: segmentViewProperties)
+        
             segmentView.delegate = self
-            
+        
             segmentView.addSegmentWithTitle("34", onSelectionImage: nil, offSelectionImage: nil)
             segmentView.addSegmentWithTitle("36", onSelectionImage: nil, offSelectionImage: nil)
             segmentView.addSegmentWithTitle("38", onSelectionImage: nil, offSelectionImage: nil)
@@ -263,16 +264,20 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             segmentView.addSegmentWithTitle("42", onSelectionImage: nil, offSelectionImage: nil)
             segmentView.addSegmentWithTitle("44", onSelectionImage: nil, offSelectionImage: nil)
             segmentView.addSegmentWithTitle("LSM", onSelectionImage: nil, offSelectionImage: nil)
-            
-            // You can programmatically select/deselect a segment by calling selectSegmentAtIndex(index: Int)
-//            segmentView.selectSegmentAtIndex(0)
         
+            // You can programmatically select/deselect a segment by calling selectSegmentAtIndex(index: Int)
+            // segmentView.selectSegmentAtIndex(0)
+        
+            // adding custom SV to pageScroll view
             self.pageScoll.addSubview(self.segmentView)
         
-        // register target-action method
+        
+        // register target-action method for the bottom segmented view
         productDetailsSV.addTarget(self, action: "segmentChanged", forControlEvents: .ValueChanged)
 
     }
+    
+    
     
     override func viewWillAppear(animated: Bool) {
         
@@ -289,9 +294,14 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
         sizeChartButton.layer.borderColor = mediumGray.CGColor
         sizeChartButton.layer.cornerRadius = 5.0
         
-        svTextLabel.text = notesText
         
+        // setting text notes label (combined with auto layout in storyboard)
+        svTextLabel.numberOfLines = 0
+        svTextLabel.text = notesText
+        svTextLabel.sizeToFit()
     }
+    
+
     
     func segmentChanged() {
         
@@ -305,13 +315,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
         }
         
-        var newHeight : CGFloat = svTextLabel.frame.height
-        
-        svTextLabel.numberOfLines = 0
-        svTextLabel.sizeToFit()
-        
-        
-        println(svTextLabel.frame.height)
+        // println("text label height: \(svTextLabel.frame.height)")
         
     }
     

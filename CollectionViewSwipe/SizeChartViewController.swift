@@ -30,7 +30,7 @@ class SizeChartViewController: UIViewController {
         
         scroll1.contentSize.width = 490
         scroll1.contentSize.height = 242
-        
+                
         scroll2.contentSize.width = 490
         scroll2.contentSize.height = 256
         
@@ -40,8 +40,8 @@ class SizeChartViewController: UIViewController {
         scroll4.contentSize.width = 490
         scroll4.contentSize.height = 192
         
-        mainScroll.contentSize.width = UIScreen().bounds.width
-        mainScroll.contentSize.height = 1040
+//        mainScroll.contentSize.width = UIScreen().bounds.width
+//        mainScroll.contentSize.height = 1040
         
         image1.image = UIImage(named: "sizeChart_slide1")
         image2.image = UIImage(named: "sizeChart_slide2")
